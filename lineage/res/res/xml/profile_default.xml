@@ -21,6 +21,14 @@
         </ringModeDescriptor>
     </profile>
     <profile
+        nameres="profileNameVibrate"
+        uuid="53959605-7892-5e24-fba1-8fad7631937f">
+        <ringModeDescriptor>
+            <value>vibrate</value>
+            <override>true</override>
+        </ringModeDescriptor>
+    </profile>
+    <profile
         nameres="profileNameAutomobile"
         uuid="6a181391-12ef-4f43-a701-32b11ed69449">
         <!-- turn GPS on -->

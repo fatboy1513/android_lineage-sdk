@@ -18,6 +18,7 @@
     <string name="profileNameWork">工作</string>
     <string name="profileNameHome">住宅</string>
     <string name="profileNameSilent">静音</string>
+    <string name="profileNameVibrate">振动</string>
     <string name="profileNameNight">夜晚</string>
     <string name="profileNameAutomobile">汽车</string>
     <string name="profileGroupPhone">电话</string>
