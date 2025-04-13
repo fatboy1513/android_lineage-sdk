@@ -84,7 +84,7 @@ public class NetworkTraffic extends TextView {
     private final SettingsObserver mObserver;
 
     private int mMode = MODE_DISABLED;
-    private int mPosition = POSITION_CENTER;
+    private int mPosition = POSITION_END;
     private int mViewPosition = -1;
     private boolean mNetworkTrafficIsVisible;
     private long mTxKbps;
@@ -422,13 +422,13 @@ public class NetworkTraffic extends TextView {
         ContentResolver resolver = mContext.getContentResolver();
 
         mMode = LineageSettings.Secure.getInt(resolver,
-                LineageSettings.Secure.NETWORK_TRAFFIC_MODE, 0);
+                LineageSettings.Secure.NETWORK_TRAFFIC_MODE, 3);
         mPosition = LineageSettings.Secure.getInt(resolver,
-                LineageSettings.Secure.NETWORK_TRAFFIC_POSITION, POSITION_CENTER);
+                LineageSettings.Secure.NETWORK_TRAFFIC_POSITION, POSITION_END);
         mAutoHide = LineageSettings.Secure.getInt(resolver,
-                LineageSettings.Secure.NETWORK_TRAFFIC_AUTOHIDE, 0) == 1;
+                LineageSettings.Secure.NETWORK_TRAFFIC_AUTOHIDE, 1) == 1;
         mUnits = LineageSettings.Secure.getInt(resolver,
-                LineageSettings.Secure.NETWORK_TRAFFIC_UNITS, UNITS_KILOBYTES);
+                LineageSettings.Secure.NETWORK_TRAFFIC_UNITS, UNITS_AUTOBYTES);
         mShowUnits = LineageSettings.Secure.getInt(resolver,
                 LineageSettings.Secure.NETWORK_TRAFFIC_SHOW_UNITS, SHOW_UNITS_ON);
 
